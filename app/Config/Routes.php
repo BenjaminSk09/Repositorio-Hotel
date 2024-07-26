@@ -15,7 +15,8 @@ $routes->get('eliminar_cliente/(:num)','ClientesController::eliminarClientes/$1'
 $routes->get('eliminar_hotel/(:num)','HotelesController::eliminarHoteles/$1');
 $routes->get('eliminar_reservacion/(:num)','ReservacionesController::eliminarReservaciones/$1');
 
-
+$routes->get('buscar_reservacion/(:num)','ReservacionesController::buscarReservaciones');
+$routes->post('modificar_hoteles','ReservacionesController::modificarReservaciones');
 //crear modelo cuando elimine la reservacion, 
 
 /* use App\Models\DetalleReservacion

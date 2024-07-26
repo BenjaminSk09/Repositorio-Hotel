@@ -19,4 +19,28 @@ class ReservacionesController extends BaseController
         $reservacion->delete([$id]);
         return redirect()->route('reservaciones');
     }
+
+    public function buscarReservaciones($reservacion_id = null)
+    {
+        $reservacion = new ReservacionesModel();
+        $datos['datos']=$reservacion->where('reservacion_id',$reservacion_id)->first();
+        return view ('form_modificar_reservaciones', $datos);
+    }
+
+    public function modificarReservaciones()
+    {
+        $reservacion = new ReservacionesModel();
+
+        $datos =[
+            'reservacion_id' => $this->request->getVar('txtReservacion'),
+            'fecha' => $this->request->getVar('txtFecha'),
+            'cliente_id' => $this->request->getVar('txtClienteId'),
+            'hotel_id'=>$this->request->getVar('txtHotelId'), 
+            'descripcion'=>$this->request->getVar('txtDescripcion'),
+            'usuario_id'=>$this->request->getVar('txtUsuarioId'),
+        ];
+    
+        $reservacion->update($datos['reservacion_id'], $datos);
+        return redirect()->route('clientes');
+}
 }
