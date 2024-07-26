@@ -9,7 +9,7 @@ class DetalleReservacionModel extends Model
     protected $table         = 'detalle_reservacion';
     protected $primaryKey ='reservacion_id';
     protected $allowedFields = [
-        'reservacion_id', 'habilitacion_id', 'fecha_ingreso', 'fecha_salida', 'nombre_reservacion'
+        'reservacion_id', 'habitacion_id', 'fecha_ingreso', 'fecha_salida', 'nombre_reservacion'
     ];
     //protected $returnType    = \App\Entities\User::class;
     //protected $useTimestamps = true;

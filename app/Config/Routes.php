@@ -16,16 +16,14 @@ $routes->get('eliminar_hotel/(:num)','HotelesController::eliminarHoteles/$1');
 $routes->get('eliminar_reservacion/(:num)','ReservacionesController::eliminarReservaciones/$1');
 
 $routes->get('buscar_reservacion/(:num)','ReservacionesController::buscarReservaciones');
-$routes->post('modificar_hoteles','ReservacionesController::modificarReservaciones');
-//crear modelo cuando elimine la reservacion, 
+$routes->post('modificar_reservaciones','ReservacionesController::modificarReservaciones');
 
-/* use App\Models\DetalleReservacion
+$routes->get('buscar_cliente/(:num)', 'ClientesController::buscarCliente');
+$routes->post('modificar_clientes', 'ClientesController::modificarCliente');
+$routes->get('nuevo_cliente', 'ClientesController::nuevoCliente');
+$routes->post('agregar_clientes','ClientesController::agregarCliente');
 
-public function eliminarReservacion($id=null){
-    $reservaciones = new ReservacionesModel();
-    $detalle-> delete($id);
-
-    $reservaciones = new ReservacionesModel();
-    $reservaciones->delete($id);
-    return redirect()->route('ver_reservaciones');
-}*/
+$routes->get('buscar_hotel/(:num)','HotelesController::buscarHoteles');
+$routes->post('modificar_hoteles','HotelesController::modificarHoteles');
+$routes->get('nuevo_hotel', 'HotelesController::nuevoHotel');
+$routes->post('agregar_hoteles', 'HotelesController::agregarHotel');

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>modificar Clientes</title>
+    <title>modificar reservaciones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -12,10 +12,10 @@
 
 <body>
 <div class="container text-center">
-    <h1>modificar clientes</h1>
+    <h1>Modificar Reservaciones</h1>
         <div class="row justify-content-center">
             <div class="col-4 border p-4">
-            <form action="<?= base_url('modificar_hoteles') ?>" method="post">
+            <form action="<?= base_url('modificar_reservaciones') ?>" method="post">
                     <div class="mb-3">
                         <label for="txtReservacion" class="form-label">Id del cliente</label>
                         <input type="text" id="txtReservacion" name="txtReservacion" class="form-control"

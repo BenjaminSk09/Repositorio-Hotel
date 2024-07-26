@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 use App\Models\ReservacionesModel;
+use App\Models\UsuariosModel;
+use App\Models\HotelesModel;
+use App\Models\HabitacionesModel;
 
 class ReservacionesController extends BaseController
 {
@@ -29,8 +32,6 @@ class ReservacionesController extends BaseController
 
     public function modificarReservaciones()
     {
-        $reservacion = new ReservacionesModel();
-
         $datos =[
             'reservacion_id' => $this->request->getVar('txtReservacion'),
             'fecha' => $this->request->getVar('txtFecha'),
@@ -39,8 +40,9 @@ class ReservacionesController extends BaseController
             'descripcion'=>$this->request->getVar('txtDescripcion'),
             'usuario_id'=>$this->request->getVar('txtUsuarioId'),
         ];
-    
+        $reservacion = new ReservacionesModel();
+        
         $reservacion->update($datos['reservacion_id'], $datos);
-        return redirect()->route('clientes');
+        return redirect()->route('reservaciones');
 }
 }
