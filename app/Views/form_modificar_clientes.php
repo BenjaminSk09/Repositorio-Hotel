@@ -19,46 +19,46 @@
                     <div class="mb-3">
                         <label for="txtClienteId" class="form-label">Id del cliente</label>
                         <input type="text" id="txtClienteId" name="txtClienteId" class="form-control"
-                            placeholder="ingrese la Reservacion" >
+                            placeholder="Ingrese el Id del Cliente" >
                     </div>
                     <div class="mb-3">
                         <label for="txtNombre" class="form-label">Nombre</label>
                         <input type="text" id="txtNombre" name="txtNombre" class="form-control"
-                            placeholder="ingrese La Fecha">
+                            placeholder="Ingrese su Nombre">
                     </div>
                     <div class="mb-3">
                         <label for="txtApellido" class="form-label">Apellido</label>
                         <input type="text" id="txtApellido" name="txtApellido" class="form-control"
-                            placeholder="ingrese el Id del cliente">
+                            placeholder="Ingrese su Apellido">
                     </div>
                     <div class="mb-3">
                         <label for="txtNit" class="form-label">Nit</label>
                         <input type="text" id="txtNit" name="txtNit" class="form-control"
-                            placeholder="ingrese el Id del hotel">
+                            placeholder="Ingrese su No.Nit">
 
                     </div>
                     <div class="mb-3">
                         <label for="txtTelefono" class="form-label">Telefono</label>
                         <input type="text" id="txtTelefono" name="txtTelefono" class="form-control"
-                            placeholder="ingrese la descripcion">
+                            placeholder="Ingrese su No.Telefono">
                     </div>
                     
                     <div class="mb-3">
                         <label for="txtCorreoElectronico" class="form-label">Correo</label>
                         <input type="text" id="txtCorreoElectronico" name="txtCorreoElectronico" class="form-control"
-                            placeholder="ingrese el id del usuario">
+                            placeholder="Ingrese su Correo Electronico">
                     </div>
                     
                     <div class="mb-3">
                         <label for="txtDireccion" class="form-label">Direccion</label>
                         <input type="text" id="txtDireccion" name="txtDireccion" class="form-control"
-                            placeholder="ingrese el id del usuario">
+                            placeholder="Ingrese su Direccion">
                     </div>
 
                     <div class="mb-3">
                         <label for="txtContrasenia" class="form-label">Contraseña</label>
                         <input type="text" id="txtContrasenia" name="txtContrasenia" class="form-control"
-                            placeholder="ingrese el id del usuario">
+                            placeholder="Ingrese su Contraseña">
                     </div>
 
                     <div class="mb-3  ">

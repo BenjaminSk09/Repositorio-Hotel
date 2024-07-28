@@ -11,55 +11,78 @@
 </head>
 
 <body>
-<div class="container text-center">
-    <h1>Agregar Hoteles</h1>
+    <div class="container text-center">
+        <h1>Agregar Hoteles</h1>
         <div class="row justify-content-center">
             <div class="col-4 border p-4">
-            <form action="<?= base_url('agregar_hoteles') ?>" method="post">
+                <form action="<?= base_url('agregar_hoteles') ?>" method="post">
                     <div class="mb-3">
                         <label for="txtHotelId" class="form-label">Id del Hotel</label>
-                        <input type="text" id="txtHotelId" name="txtHotelId" class="form-control"
-                            placeholder="ingrese la Reservacion" >
+                        <input type="number" id="txtHotelId" name="txtHotelId" class="form-control"
+                            placeholder="Ingrese el Id del Hotel">
                     </div>
                     <div class="mb-3">
                         <label for="txtNombre" class="form-label">Nombre</label>
                         <input type="text" id="txtNombre" name="txtNombre" class="form-control"
-                            placeholder="ingrese La Fecha">
+                            placeholder="Ingrese su Nombre">
                     </div>
                     <div class="mb-3">
                         <label for="txtCorreo" class="form-label">Correo</label>
-                        <input type="text" id="txtCorreo" name="txtCorreo" class="form-control"
-                            placeholder="ingrese el Id del cliente">
+                        <input type="email" id="txtCorreo" name="txtCorreo" class="form-control"
+                            placeholder="Ingese su Correo Electronico">
                     </div>
                     <div class="mb-3">
                         <label for="txtTelefono" class="form-label">Telefono</label>
-                        <input type="text" id="txtTelefono" name="txtTelefono" class="form-control"
-                            placeholder="ingrese el Id del hotel">
+                        <input type="number" id="txtTelefono" name="txtTelefono" class="form-control"
+                            placeholder="ingrese su No.Telefono">
 
                     </div>
 
                     <div class="mb-3">
                         <label for="txtDireccion" class="form-label">Direccion</label>
                         <input type="text" id="txtDireccion" name="txtDireccion" class="form-control"
-                            placeholder="ingrese el id del usuario">
+                            placeholder="Ingrese su Direccion">
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="txtCiudadId" class="form-label">Id de la ciudad</label>
-                        <input type="text" id="txtCiudadId" name="txtCiudadId" class="form-control"
-                            placeholder="ingrese el id del usuario">
+                        <select class="form-select" id="txtCiudadId" name="txtCiudadId">
+                            <option selected>seleccione una id para la ciudad</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="11">11</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                        </Select>
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="txtCategoriaID" class="form-label">Id de la categoria</label>
-                        <input type="text" id="txtCategoriaId" name="txtCategoriaId" class="form-control"
-                            placeholder="ingrese el id del usuario">
+                        <select class="form-select" id="txtCategoriaId" name="txtCategoriaId">
+                            <option selected>Seleccione una id para la categoria</option>
+                            <option value="102">102</option>
+                            <option value="103">103</option>
+                            <option value="104">104</option>
+                            <option value="104">105</option>'
+                        </select>
                     </div>
 
                     <div class="mb-3">
                         <label for="txtUsuarioId" class="form-label">Id del usuario</label>
-                        <input type="text" id="txtUsuarioId" name="txtUsuarioId" class="form-control"
-                            placeholder="ingrese el id del usuario">
+                        <select class="form-select" id="txtUsuarioId" name="txtUsuarioId">
+                            <option selected>Seleccione un Id para el usuario</option>
+                            <option value="100">100</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="301">301</option>
+                            <option value="777">777</option>
+                            </select<>
                     </div>
 
                     <div class="mb-3  ">

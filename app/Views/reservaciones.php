@@ -13,7 +13,7 @@
 <body class="bg-dark text-white">
     <h1 class="text-center display-1 text-white">Pagina Reservaciones</h1>
     <div class="container text-center">
-        <a href="nuevo_cliente" class="btn"><i class="bi bi-cloud-plus-fill text-white">NUEVO CLIENTE</i></a>
+        <a href="nuevo_reservacion" class="btn"><i class="bi bi-cloud-plus-fill text-white">NUEVO RESERVACION</i></a>
         <table class="table table-border table-bordered border-secondary border-opacity-50 ">
             <thead>
                 <tr>

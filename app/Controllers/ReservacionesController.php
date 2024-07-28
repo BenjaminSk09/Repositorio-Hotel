@@ -45,4 +45,33 @@ class ReservacionesController extends BaseController
         $reservacion->update($datos['reservacion_id'], $datos);
         return redirect()->route('reservaciones');
 }
+
+    public function nuevoReservacion(): string
+    {
+    return view ('form_agregar_reservaciones');
+    }
+
+    public function agregarReservacion()
+    {
+        $reservacionid = $this->request->getVar('txtReservacionId');
+        $fecha = $this->request->getVar('txtFecha');
+        $clienteid = $this->request->getVar('txtClienteId');
+        $hotelid = $this->request->getVar('txtHotelId');
+        $descripcion = $this->request->getVar('txtDescripcion');
+        $usuarioid = $this->request->getVar('txtUsuarioId');
+
+        $reservacion = new ReservacionesModel();
+        
+        $datos=[
+            'reservacion_id' => $reservacionid,
+            'fecha' => $fecha,
+            'cliente_id' => $clienteid,
+            'hotel_id' => $hotelid,
+            'descripcion' => $descripcion,
+            'usuario_id' => $usuarioid
+        ];
+        
+        $reservacion->insert($datos);
+        return redirect()->route('reservaciones');
+    }
 }

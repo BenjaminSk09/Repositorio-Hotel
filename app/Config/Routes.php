@@ -17,6 +17,8 @@ $routes->get('eliminar_reservacion/(:num)','ReservacionesController::eliminarRes
 
 $routes->get('buscar_reservacion/(:num)','ReservacionesController::buscarReservaciones');
 $routes->post('modificar_reservaciones','ReservacionesController::modificarReservaciones');
+$routes->get('nuevo_reservacion','ReservacionesController::nuevoReservacion');
+$routes->post('agregar_reservaciones', 'ReservacionesController::agregarReservacion');
 
 $routes->get('buscar_cliente/(:num)', 'ClientesController::buscarCliente');
 $routes->post('modificar_clientes', 'ClientesController::modificarCliente');
