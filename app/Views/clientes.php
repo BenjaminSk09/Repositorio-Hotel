@@ -4,52 +4,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pagina Clientes</title>
+    <title>Página Clientes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body class="bg-dark text-white">
-    <h1 class="text-center display-1 text-white">Pagina Clientes</h1>
+    <h1 class="text-center display-1 text-white my-4">Página Clientes</h1>
     <div class="container text-center">
-        <a href="nuevo_cliente" class="btn"><i class="bi bi-cloud-plus-fill text-white">NUEVO CLIENTE</i></a>
-        <table class="table table-border table-bordered border-secondary border-opacity-50 ">
-            <thead>
-                <tr>
-                    <th>ID Cliente</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Nit</th>
-                    <th>Telefono</th>
-                    <th>Correo Electronico</th>
-                    <th>Direccion</th>
-                    <th>Contraseña</th>
-                    <th>acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach($datos as $clientes): ?>
-                <tr>
-                    <td><?php echo $clientes ['cliente_id'] ?></td>
-                    <td><?php echo $clientes ['nombre'] ?></td>
-                    <td><?php echo $clientes ['apellido'] ?></td>
-                    <td><?php echo $clientes ['nit'] ?></td>
-                    <td><?php echo $clientes ['telefono'] ?></td>
-                    <td><?php echo $clientes ['correo_electronico'] ?></td>
-                    <td><?php echo $clientes ['direccion'] ?></td>
-                    <td><?php echo $clientes ['contrasenia'] ?></td>
-                    <td>
-
-                        <a href="<?= base_url('buscar_cliente/').$clientes['cliente_id']?>" class="btn btn-info"><i
-                                class="bi bi-arrow-clockwise">Actualizar</i></a>
-                        <a href="<?= base_url('eliminar_cliente/').$clientes['cliente_id']?>" class="btn btn-danger"><i
-                                class="bi bi-arrow-clockwise">Eliminar</i></a>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+        <a href="nuevo_cliente" class="btn btn-primary my-3"><i class="bi bi-cloud-plus-fill"></i> NUEVO CLIENTE</a>
+        <div class="table-responsive">
+            <table class="table table-bordered table-dark table-hover border border-3 rounded-3">
+                <thead class="table-light">
+                    <tr>
+                        <th class="d-none d-md-table-cell">ID Cliente</th>
+                        <th class="d-none d-md-table-cell">Nombre</th>
+                        <th class="d-none d-md-table-cell">Apellido</th>
+                        <th class="d-none d-md-table-cell">NIT</th>
+                        <th class="d-none d-md-table-cell">Teléfono</th>
+                        <th class="d-none d-md-table-cell">Correo Electrónico</th>
+                        <th class="d-none d-md-table-cell">Dirección</th>
+                        <th class="d-none d-md-table-cell">Contraseña</th>
+                        <th class="d-none d-md-table-cell">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($datos as $clientes): ?>
+                    <tr class="border border-2 rounded-2">
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['cliente_id'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['nombre'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['apellido'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['nit'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['telefono'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['correo_electronico'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['direccion'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $clientes['contrasenia'] ?></td>
+                        <td class="d-none d-md-table-cell">
+                            <a href="<?= base_url('buscar_cliente/').$clientes['cliente_id']?>" class="btn btn-info my-1"><i
+                                    class="bi bi-pencil"></i> Actualizar</a>
+                            <a href="<?= base_url('eliminar_cliente/').$clientes['cliente_id']?>" class="btn btn-danger my-1"><i
+                                    class="bi bi-trash"></i> Eliminar</a>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
@@ -57,4 +58,3 @@
 </body>
 
 </html>
-

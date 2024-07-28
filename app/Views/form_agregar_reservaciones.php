@@ -10,44 +10,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
-    <div class="container text-center">
-        <h1>Agregar Reservaciones</h1>
+<body class="bg-dark text-white">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Agregar Reservaciones</h1>
         <div class="row justify-content-center">
-            <div class="col-4 border p-4">
+            <div class="col-lg-6 col-md-8 col-sm-10 bg-secondary rounded-3 border border-light border-3 p-4">
                 <form action="<?= base_url('agregar_reservaciones') ?>" method="post">
                     <div class="mb-3">
                         <label for="txtReservacionId" class="form-label">Id de la Reservacion</label>
                         <input type="number" id="txtReservacionId" name="txtReservacionId" class="form-control"
-                            placeholder="Ingrese el Id del Hotel">
+                            placeholder="Ingrese el Id de la Reservacion" required>
                     </div>
                     <div class="mb-3">
                         <label for="txtFecha" class="form-label">Fecha</label>
                         <input type="date" id="txtFecha" name="txtFecha" class="form-control"
-                            placeholder="Ingrese la Fecha">
+                            placeholder="Ingrese la Fecha" required>
                     </div>
                     <div class="mb-3">
                         <label for="txtClienteId" class="form-label">Id del Cliente</label>
                         <input type="text" id="txtClienteId" name="txtClienteId" class="form-control"
-                            placeholder="Ingese su Correo Electronico">
+                            placeholder="Ingrese el Id del Cliente" required>
                     </div>
                     <div class="mb-3">
                         <label for="txtHotelId" class="form-label">Hotel Id</label>
                         <input type="number" id="txtHotelId" name="txtHotelId" class="form-control"
-                            placeholder="ingrese su No.Telefono">
-
+                            placeholder="Ingrese el Id del Hotel" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="txtDescripcion" class="form-label">Descripcion</label>
                         <input type="text" id="txtDescripcion" name="txtDescripcion" class="form-control"
-                            placeholder="Ingrese su Direccion">
+                            placeholder="Ingrese la Descripcion" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="txtUsuarioId" class="form-label">Id de la ciudad</label>
-                        <select class="form-select" id="txtUsuarioId" name="txtUsuarioId">
-                        <option selected>Seleccione un usuario id</option>
+                        <label for="txtUsuarioId" class="form-label">Id del Usuario</label>
+                        <select class="form-select" id="txtUsuarioId" name="txtUsuarioId" required>
+                            <option selected disabled>Seleccione un Id para el Usuario</option>
                             <option value="100">100</option>
                             <option value="200">200</option>
                             <option value="300">300</option>
@@ -56,15 +55,12 @@
                         </select>
                     </div>
 
-                    <div class="mb-3  ">
-                        <input type="submit" class="btn btn-success form-control" value="Guardar Cambios">
+                    <div class="mb-3">
+                        <input type="submit" class="btn btn-success w-100" value="Guardar Cambios">
                     </div>
                 </form>
-
             </div>
-
         </div>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

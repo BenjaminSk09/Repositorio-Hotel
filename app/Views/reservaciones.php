@@ -11,41 +11,43 @@
 </head>
 
 <body class="bg-dark text-white">
-    <h1 class="text-center display-1 text-white">Pagina Reservaciones</h1>
-    <div class="container text-center">
-        <a href="nuevo_reservacion" class="btn"><i class="bi bi-cloud-plus-fill text-white">NUEVO RESERVACION</i></a>
-        <table class="table table-border table-bordered border-secondary border-opacity-50 ">
-            <thead>
-                <tr>
-                    <th>Reservacion ID</th>
-                    <th>Fecha</th>
-                    <th>Cliente ID</th>
-                    <th>Hotel ID</th>
-                    <th>Descripcion</th>
-                    <th>Usuario ID</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach($datos as $reservaciones): ?>
-                <tr>
-                    <td><?php echo $reservaciones ['reservacion_id'] ?></td>
-                    <td><?php echo $reservaciones ['fecha'] ?></td>
-                    <td><?php echo $reservaciones ['cliente_id'] ?></td>
-                    <td><?php echo $reservaciones ['hotel_id'] ?></td>
-                    <td><?php echo $reservaciones ['descripcion'] ?></td>
-                    <td><?php echo $reservaciones ['usuario_id'] ?></td>
-                    <td>
-
-                        <a href="<?= base_url('buscar_reservacion/').$reservaciones['reservacion_id']?>" class="btn btn-info"><i
-                                class="bi bi-arrow-clockwise">Actualizar</i></a>
-                        <a href="<?= base_url('eliminar_reservacion/').$reservaciones['reservacion_id']?>" class="btn btn-danger"><i
-                                class="bi bi-arrow-clockwise">Eliminar</i></a>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+    
+    <div class="container my-4 text-center">
+        <h1 class="text-center display-1 text-white">Pagina Reservaciones</h1>
+        <div class="text-center mb-4">
+            <a href="nuevo_reservacion" class="btn btn-primary"><i class="bi bi-cloud-plus-fill text-white"></i> NUEVO RESERVACION</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-dark table-bordered border-light table-hover border border-3 rounded-3">
+                <thead class="table-light">
+                    <tr>
+                        <th>Reservacion ID</th>
+                        <th>Fecha</th>
+                        <th>Cliente ID</th>
+                        <th>Hotel ID</th>
+                        <th>Descripcion</th>
+                        <th>Usuario ID</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($datos as $reservaciones): ?>
+                    <tr>
+                        <td><?php echo $reservaciones ['reservacion_id'] ?></td>
+                        <td><?php echo $reservaciones ['fecha'] ?></td>
+                        <td><?php echo $reservaciones ['cliente_id'] ?></td>
+                        <td><?php echo $reservaciones ['hotel_id'] ?></td>
+                        <td><?php echo $reservaciones ['descripcion'] ?></td>
+                        <td><?php echo $reservaciones ['usuario_id'] ?></td>
+                        <td>
+                            <a href="<?= base_url('buscar_reservacion/').$reservaciones['reservacion_id']?>" class="btn btn-info"><i class="bi bi-arrow-clockwise"></i> Actualizar</a>
+                            <a href="<?= base_url('eliminar_reservacion/').$reservaciones['reservacion_id']?>" class="btn btn-danger"><i class="bi bi-x-circle"></i> Eliminar</a>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
@@ -53,4 +55,3 @@
 </body>
 
 </html>
-
