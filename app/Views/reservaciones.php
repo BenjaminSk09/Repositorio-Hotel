@@ -38,7 +38,7 @@
         asi como eliminar cualquier reservacion.
 </p>
         <div class="text-center mb-4">
-            <a href="nuevo_reservacion" class="btn btn-primary"><i class="bi bi-cloud-plus-fill text-white"></i> NUEVO RESERVACION</a>
+            <a href="nuevo_reservacion" class="btn btn-primary"><i class="bi bi-cloud-plus-fill text-white"></i> NUEVA RESERVACION</a>
         </div>
         <div class="table-responsive">
             <table class="table table-dark table-bordered border-light table-hover border border-3 rounded-3">
