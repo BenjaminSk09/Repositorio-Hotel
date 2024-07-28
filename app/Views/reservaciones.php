@@ -12,8 +12,31 @@
 
 <body class="bg-dark text-white">
     
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container">
+            <a class="navbar-brand" href="<?= base_url('reservaciones') ?>">Reservaciones</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('hoteles') ?>">Pagina Hoteles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('clientes') ?>">Pagina Clientes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container my-4 text-center">
         <h1 class="text-center display-1 text-white">Pagina Reservaciones</h1>
+        <p class="text-center text-white h4">En la siguiente pagina podras acceder a 
+        las reservaciones, podras crear una nueva reservacion, actualizar los datos de cualquier reservacion, 
+        asi como eliminar cualquier reservacion.
+</p>
         <div class="text-center mb-4">
             <a href="nuevo_reservacion" class="btn btn-primary"><i class="bi bi-cloud-plus-fill text-white"></i> NUEVO RESERVACION</a>
         </div>
