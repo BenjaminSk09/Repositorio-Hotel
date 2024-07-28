@@ -12,10 +12,11 @@
 
 <body class="bg-dark text-white">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url('clientes') ?>">Clientes</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -32,10 +33,10 @@
     </nav>
 
     <h1 class="text-center display-1 text-white my-4">Página Clientes</h1>
-    <p class="text-center text-white h4">En la siguiente pagina podras acceder a 
-        los clientes, podras crear un usuario nuevo para un cliente, actualizar los datos de un cliente, 
+    <p class="text-center text-white h4">En la siguiente pagina podras acceder a
+        los clientes, podras crear un usuario nuevo para un cliente, actualizar los datos de un cliente,
         y eliminar un cliente.
-</p>
+    </p>
     <div class="container text-center">
         <a href="nuevo_cliente" class="btn btn-primary my-3"><i class="bi bi-cloud-plus-fill"></i> NUEVO CLIENTE</a>
         <div class="table-responsive">
@@ -65,10 +66,10 @@
                         <td class="d-none d-md-table-cell"><?php echo $clientes['direccion'] ?></td>
                         <td class="d-none d-md-table-cell"><?php echo $clientes['contrasenia'] ?></td>
                         <td class="d-none d-md-table-cell">
-                            <a href="<?= base_url('buscar_cliente/').$clientes['cliente_id']?>" class="btn btn-info my-1"><i
-                                    class="bi bi-pencil"></i> Actualizar</a>
-                            <a href="<?= base_url('eliminar_cliente/').$clientes['cliente_id']?>" class="btn btn-danger my-1"><i
-                                    class="bi bi-trash"></i> Eliminar</a>
+                            <a href="<?= base_url('buscar_cliente/').$clientes['cliente_id']?>"
+                                class="btn btn-info my-1"><i class="bi bi-pencil"></i> Actualizar</a>
+                            <a href="<?= base_url('eliminar_cliente/').$clientes['cliente_id']?>"
+                                class="btn btn-danger my-1"><i class="bi bi-trash"></i> Eliminar</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

@@ -12,10 +12,11 @@
 
 <body class="bg-dark text-white">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url('hoteles') ?>">Hoteles</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -32,10 +33,10 @@
     </nav>
 
     <h1 class="text-center display-1 text-white my-4">Página Hoteles</h1>
-    <p class="text-center text-white h4">En la siguiente pagina podras acceder a 
-        los hoteles, podras registrar un nuevo hotel en la base de datos, actualizar los datos de cualquier hotel, 
+    <p class="text-center text-white h4">En la siguiente pagina podras acceder a
+        los hoteles, podras registrar un nuevo hotel en la base de datos, actualizar los datos de cualquier hotel,
         y eliminar un hotel de la base de datos.
-</p>
+    </p>
     <div class="container text-center">
         <div class="text-center mb-4">
             <a href="nuevo_hotel" class="btn btn-primary"><i class="bi bi-cloud-plus-fill"></i> NUEVO HOTEL</a>
@@ -67,8 +68,10 @@
                         <td><?php echo $hoteles['categoria_id'] ?></td>
                         <td><?php echo $hoteles['usuario_id'] ?></td>
                         <td>
-                            <a href="<?= base_url('buscar_hotel/').$hoteles['hotel_id']?>" class="btn btn-info my-1"><i class="bi bi-pencil"></i> Actualizar</a>
-                            <a href="<?= base_url('eliminar_hotel/').$hoteles['hotel_id']?>" class="btn btn-danger my-1"><i class="bi bi-trash"></i> Eliminar</a>
+                            <a href="<?= base_url('buscar_hotel/').$hoteles['hotel_id']?>" class="btn btn-info my-1"><i
+                                    class="bi bi-pencil"></i> Actualizar</a>
+                            <a href="<?= base_url('eliminar_hotel/').$hoteles['hotel_id']?>"
+                                class="btn btn-danger my-1"><i class="bi bi-trash"></i> Eliminar</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

@@ -11,11 +11,12 @@
 </head>
 
 <body class="bg-dark text-white">
-    
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url('reservaciones') ?>">Reservaciones</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -33,12 +34,13 @@
 
     <div class="container my-4 text-center">
         <h1 class="text-center display-1 text-white">Pagina Reservaciones</h1>
-        <p class="text-center text-white h4">En la siguiente pagina podras acceder a 
-        las reservaciones, podras crear una nueva reservacion, actualizar los datos de cualquier reservacion, 
-        asi como eliminar cualquier reservacion.
-</p>
+        <p class="text-center text-white h4">En la siguiente pagina podras acceder a
+            las reservaciones, podras crear una nueva reservacion, actualizar los datos de cualquier reservacion,
+            asi como eliminar cualquier reservacion.
+        </p>
         <div class="text-center mb-4">
-            <a href="nuevo_reservacion" class="btn btn-primary"><i class="bi bi-cloud-plus-fill text-white"></i> NUEVA RESERVACION</a>
+            <a href="nuevo_reservacion" class="btn btn-primary"><i class="bi bi-cloud-plus-fill text-white"></i> NUEVA
+                RESERVACION</a>
         </div>
         <div class="table-responsive">
             <table class="table table-dark table-bordered border-light table-hover border border-3 rounded-3">
@@ -63,8 +65,10 @@
                         <td><?php echo $reservaciones ['descripcion'] ?></td>
                         <td><?php echo $reservaciones ['usuario_id'] ?></td>
                         <td>
-                            <a href="<?= base_url('buscar_reservacion/').$reservaciones['reservacion_id']?>" class="btn btn-info"><i class="bi bi-arrow-clockwise"></i> Actualizar</a>
-                            <a href="<?= base_url('eliminar_reservacion/').$reservaciones['reservacion_id']?>" class="btn btn-danger"><i class="bi bi-x-circle"></i> Eliminar</a>
+                            <a href="<?= base_url('buscar_reservacion/').$reservaciones['reservacion_id']?>"
+                                class="btn btn-info"><i class="bi bi-arrow-clockwise"></i> Actualizar</a>
+                            <a href="<?= base_url('eliminar_reservacion/').$reservaciones['reservacion_id']?>"
+                                class="btn btn-danger"><i class="bi bi-x-circle"></i> Eliminar</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
